@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>fitText Mocha Test</title>
+
+  <style>
+    .testElement {margin:1em;padding:1em;border:1px silver solid;overflow-y: hidden;max-height: 2em;}
+  </style>
+  <script src="../../src/html/itFitText.js"></script >
+
+  <!-- script src="fitText.test.js"></script>
+  <script src="https://unpkg.com/chai@4.3.4/chai.js"></script>
+<script src="https://unpkg.com/mocha/mocha.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sinon@10.0.0/pkg/sinon.js"></script>
+
+<script>
+ mocha.setup('bdd');
+</script>
+
+
+<script>
+   mocha.run();
+</script -->
+</head>
+<body>
+<div id="mocha"></div>
+
+<!-- Test elements -->
+<label>Muy largo
+<input type="text" id="a1" class="ta" style="width:12rem;height:1.1rem;padding:0.3rem;font-size:2rem" name="cat" value="ABCDEFGHIJ asdf">
+</label>
+  <input type="text" id="a2" class="tada" style="width:12rem;height:1.1rem;padding:0.3rem;font-size:2rem" name="cat" value="ABCDEFGHIJ">
+  <hr>
+  <span class="laChanga" id="span" style="display: inline-block;width:12rem;height:1.1rem;padding:0.3rem;font-size:2rem;border:1px blue solid;overflow: hidden;white-space: nowrap;" >ABCDEFGHIJKLMNOPQRSTUVWXYZ 123</span>
+  <p class="laChanga"  style="max-width:12rem;height:1.1rem;padding:0.3rem;font-size:2rem;border:1px blue solid;overflow: hidden" >ABCDEFGHIJKLMNOPQRSTUVWXYZ 123</p>
+  <div class="laChanga"  style="width:12rem;height:1.1rem;padding:0.3rem;font-size:2rem;border:1px blue solid;overflow: hidden" >ABCDEFGHIJKLMNOPQRSTUVWXYZ 123</div>
+
+
+
+
+</body>
+</html>
