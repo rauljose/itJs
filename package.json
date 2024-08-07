@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "test": "nyc --report-dir=qa/coverage --reporter=html-spa --reporter=clover mocha 'tests/*.test.js' && sabik --outputReportPath=qa/metrics src",
+    "metrics": "sabik --outputReportPath=qa/metrics src",
+    "packages": "npm list --all",
+    "outdated": "npm outdated --depth=0"
+  },
+  "devDependencies": {
+    "chai": "^5.1.1",
+    "mocha": "^10.7.0",
+    "nyc": "^17.0.0",
+    "sabik": "^0.2.4"
+  }
+}
+
