@@ -52,14 +52,33 @@ function registerTextInputHandlers() {
         input.addEventListener('keydown', textInputHandler, true);
     });
 }
+/*
+    // type: email, color, number, ....
+    switch(el.type) {
+        case 'text':
+            e.stopPropagation();
+            // special cases: autonumeric
+            el.value = el.defaultValue;
+        case 'radio':
+            e.stopPropagation();
+            const radios = document.getElementsByName(el.name);
+            radios.forEach(radio => { radio.checked = radio.defaultChecked; });
+            break;
+        case 'checkbox':
+            e.stopPropagation();
+            el.checked = el.defaultChecked;
+            break;
+    }
+ */
 function textInputHandler(e) {
     let el = e.target;
     switch(e.key) {
         case 'Escape':
-        if(e.key === 'Escape' && typeof el.defaultValue === 'string') {
-            e.stopPropagation();
-            el.value = el.defaultValue;
-        }
+            if(typeof el.defaultValue === 'string') {
+                e.stopPropagation();
+                el.value = el.defaultValue;
+                return;
+            }
         break;
         case 'Enter':
             e.preventDefault();
